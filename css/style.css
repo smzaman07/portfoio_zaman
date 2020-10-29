@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+}
+header{
+	background-image: url(../images/banner.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fffefe !important;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    margin-right: 20px;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-dark .navbar-nav .nav-link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #008ed6;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.5s;
+}
+.navbar-dark .navbar-nav .nav-link::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #008ed6;
+    bottom: 0;
+    right: 0;
+    transition-duration: 0.5s;
+}
+.navbar-dark .navbar-nav .nav-link:hover::after ,
+.navbar-dark .navbar-nav .nav-link:hover::before{
+	width: 45%;
+}
+.navbar-dark .navbar-nav .show > .nav-link::after,
+.navbar-dark .navbar-nav .active > .nav-link::after,
+.navbar-dark .navbar-nav .nav-link.show::after,
+.navbar-dark .navbar-nav .nav-link.active::after,
+.navbar-dark .navbar-nav .show > .nav-link::before,
+.navbar-dark .navbar-nav .active > .nav-link::before,
+.navbar-dark .navbar-nav .nav-link.show::before,
+.navbar-dark .navbar-nav .nav-link.active::before{
+width: 45%;
+}
+h4{
+    font-size: 14px;
+    color: #008ed6;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+h1{
+    font-size: 35px;
+    color: #fff;
+    font-weight: 600;
+}
+h1 span{
+	color: #008ed6;
+}
+p{
+    color: #999999;
+    font-size: 16px;
+}
+.banner-section{
+    padding-top: 130px;
+}
+.banner-section ul{
+    margin-top: 50px;
+}
+.btn-custom {
+    background: #008ed6;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border: 1px solid #999;
+    font-weight: 600;
+    padding: 12px 18px;
+}
+.btn-custom:hover {
+    color: #fff;
+	background-color: #11b798;
+	border: 1px solid #11b798;
+}
+.btn-custom i{
+	margin-right: 5px;
+}
+.about-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+}
+
+ .about span{
+	position: relative;
+	width: 70px;
+	display: inline-block;
+    transform: translateY(-10px);
+
+}
+.about h2{
+    color: #333;
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+ .about span::after{
+	 content: "";
+	 position: absolute;
+	 width: 45%;
+	 height: 2px;
+	 background: #008ed6;
+	 bottom: 0;
+	 right: 0;
+	 animation-name: leftline;
+	 animation-duration: 2s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: ease-in-out;
+}
+.about span::before{
+	content: "";
+	position: absolute;
+	width: 45%;
+	height: 2px;
+	background: #008ed6;
+	bottom: 0;
+	left: 0;
+	animation-name: rightline;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes leftline{
+	0%{
+	 width: 45%;
+	}
+	100%{
+	 width:0 ;
+	}
+}
+@keyframes rightline{
+	0%{
+	 width: 45%;
+	}
+	100%{
+	 width: 0;
+	}
+}
+.about h1{
+    color: #333;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.about h1 strong{
+    color: #008ed6;
+}
+.about p{
+    color: #333;
+    line-height: 1.7;
+}
+.progress-section span{
+	position: relative;
+	width: 70px;
+	display: block;
+	margin: auto;
+	margin-bottom: 24px;
+}
+.progress-section span::after{
+	 content: "";
+	 position: absolute;
+	 width: 45%;
+	 height: 2px;
+	 background: #008ed6;
+	 bottom: 0;
+	 right: 0;
+	 animation-name: sillright;
+	 animation-duration: 2s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: ease-in-out;
+}
+.progress-section span::before{
+	content: "";
+	position: absolute;
+	width: 45%;
+	height: 2px;
+	background: #008ed6;
+	bottom: 0;
+	left: 0;
+	animation-name: skillleft;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+
+}
+.progress-section h2{
+	text-align: center;
+	color: #333;
+	text-transform: uppercase;
+}
+
+@keyframes skillleft{
+	0%{
+	 width:0 ;
+	}
+	100%{
+	 width: 45%;
+	}
+}
+@keyframes sillright{
+	0%{
+	 width:0 ;
+	}
+	100%{
+	 width: 45%;
+	}
+}
+.service-section{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #f5f6fb;
+}
+ .service{
+    text-align: center;
+}
+.service span{
+	position: relative;
+	width: 100px;
+	display: inline-block;
+}
+.service span::after{
+	 content: "";
+	 position: absolute;
+	 width: 45%;
+	 height: 2px;
+	 background: #008ed6;
+	 bottom: 0;
+	 right: 0;
+	 animation-name: sillright;
+	 animation-duration: 2s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: ease-in-out;}
+.service span::before{
+	content: "";
+	position: absolute;
+	width: 45%;
+	height: 2px;
+	background: #008ed6;
+	bottom: 0;
+	left: 0;
+	animation-name: skillleft;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+
+}
+
+.service h2{
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.service p{
+	max-width: 65%;
+	margin: 10px auto;
+}
+.services-part{
+	    border-radius: 10px;
+    background: #fafafa;
+    padding: 60px 30px;
+    margin-top: 50px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.services-part:hover{
+
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.30)!important;
+}
+.services-part h3{
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.services-part img{
+	   width: 100px;
+    padding-bottom: 20px;
+}
+.services-part p{
+	color: #333;
+}
+.project-section{
+
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.img-design img{
+ width: 250px;
+}
+.resume-section{}
+.resume-section .left{
+	background-color: #333;
+}
+.left img{
+	width: 200px;
+}
+.left{
+    padding: 20px 30px;
+}
+.left h1{
+    font-size: 28px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
+}
+.left ul {}
+.left ul li{}
+.left ul li h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+}
+.left ul li h5{
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+    padding-top: 15px;
+    font-weight: 500;
+}
+.left ul li span{
+    color: #ddd;
+    font-size: 15px;
+}
+.left ul li p{
+    font-size: 15px;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+.right{
+	background-color: #f1f1f1;
+	padding: 15px;
+	padding-bottom: 46px;
+}
+.right h1{
+    color: #333;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    padding: 15px;
+    border-bottom: 2px solid;
+}
+.right p{
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.infomation{}
+.infomation h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.infomation h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.contact-form{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.social-media,.send-info{
+    padding-top: 50px;
+}
+.social-media img{
+    margin-bottom: 30px;
+}
+.social-media ul{}
+.social-media ul li{}
+.social-media ul li i{
+    font-size: 30px;
+    padding: 6px 8px;
+    margin-right: 20px;
+    display: inline-block;
+    border: 1px solid #11b798;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    box-shadow: 0px 0px 3px #c7c7c7;
+}
+.social-media ul li i:hover{
+	color: #11b798;
+	border-color: #9786ff;
+	transform: scale(1.2);
+}
+.custom-form{
+    margin-bottom: 15px;
+}
+.btn-custom-send{
+    display: block;
+    padding: 10px 30px;
+}
+.btn-custom-send:hover{
+	background-color: #11b798;
+	border: 1px solid #11b798;
+}
+.copyright-section{
+	background-color: #091b29;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.copyright-section p{
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+}
+.copyright-section p span{
+    color: #11b798;
+}
